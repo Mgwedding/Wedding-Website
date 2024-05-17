@@ -8,6 +8,15 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#events">Events</a></li>
+        </ul>
+      </nav>
+    </header>
     <div class="landing">
       <div class="envlope-wrapper">
         <div id="envelope" class="close floating">
@@ -17,19 +26,19 @@
             <div class="words line1">
               <svg width="100%" height="100%">
                 <text class="text" y="50%">Dear Guest,</text>
-                </svg>
+              </svg>
             </div>
             <div class="words line2">
               <svg width="100%" height="100%">
                 <text class="text" y="50%">November 16, 2024 @ 3:30 PM</text>
-                </svg>
+              </svg>
             </div>
             <div class="words line3">
               <svg width="100%" height="100%">
                 <text class="text" y="50%">
                   Colony House, 401 N Anaheim Blvd, Anaheim, CA 92805
                 </text>
-                </svg>
+              </svg>
             </div>
           </div>
         </div>
@@ -45,16 +54,16 @@
       <p>&copy; 2024 Kristen & Ruoyu's Wedding</p>
     </footer>
   </body>
-  
+
   <script>
     function openEnvelope() {
       envelope.classList.add("open");
       envelope.classList.remove("close");
-      document.querySelectorAll(".text").forEach(element => {
+      document.querySelectorAll(".text").forEach((element) => {
         element.classList.add("animate-text");
-      })
-      envelope_is_open = true
-      open_counter += 1
+      });
+      envelope_is_open = true;
+      open_counter += 1;
     }
     function closeEnvelope() {
       envelope.classList.add("close");
@@ -63,8 +72,7 @@
     }
 
     var envelope_is_open = false;
-    var open_counter = 0
-
+    var open_counter = 0;
 
     document.addEventListener("DOMContentLoaded", function () {
       var envelope = document.querySelector("#envelope");
@@ -73,8 +81,10 @@
 
       envelope.addEventListener("click", function () {
         if (envelope_is_open && open_counter % 2 == 0) {
-          closeEnvelope()
-        } else {openEnvelope()};
+          closeEnvelope();
+        } else {
+          openEnvelope();
+        }
       });
       btn_open.addEventListener("click", function () {
         openEnvelope();
@@ -83,6 +93,5 @@
         closeEnvelope();
       });
     });
-
   </script>
 </html>
