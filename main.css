@@ -170,13 +170,14 @@ nav ul li a {
   font-size: 1.2em;
 }
 
-/* DETAIL SECTION */
+/* ENVELOPE SECTION */
 .details-section {
-  height: 600px;
+  min-height: 600px;
 }
 
 .envlope-wrapper {
   height: 70%;
+  position: relative;
 }
 
 #envelope {
@@ -252,6 +253,22 @@ nav ul li a {
   transform: translateX(-50%);
 }
 
+#envelope .click-btn {
+  position: absolute;
+  z-index: 6;
+  width: 50px;
+  top: 95%;
+  right: 0%;
+  opacity: 1;
+  transition: all 0.6 ease-in-out;
+  animation: fade-pulse 2s ease-in-out infinite;
+}
+
+#envelope.open .click-btn {
+  opacity: 0;
+  animation: none;
+}
+
 .open .flap {
   transform: rotateX(180deg);
   transition: transform 0.4s ease, z-index 0.6s;
@@ -282,35 +299,6 @@ nav ul li a {
 
 .floating {
   animation: floating 3s infinite ease-in-out;
-}
-
-.reset {
-  text-align: center;
-}
-
-.reset button {
-  font-weight: 800;
-  font-style: normal;
-  transition: all 0.1s linear;
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: solid 2px #0077b2;
-  border-radius: 4px;
-  color: #0077b2;
-  display: inline-block;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin: 5px;
-  padding: 10px;
-  line-height: 1em;
-  text-decoration: none;
-  min-width: 120px;
-  cursor: pointer;
-}
-
-.reset button:hover {
-  background-color: #0077b2;
-  color: #fff;
 }
 
 footer {
@@ -388,8 +376,8 @@ footer {
   .words {
     font-size: 0.75em;
   }
-  .animate-text {
-    stroke-width: 0.45;
+  .details-section {
+    min-height: 400px;
   }
 }
 
@@ -420,6 +408,16 @@ footer {
   }
   100% {
     transform: translate(0, -0px);
+  }
+}
+
+@keyframes fade-pulse {
+  0%,
+  100% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
   }
 }
 

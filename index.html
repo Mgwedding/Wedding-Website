@@ -100,6 +100,11 @@
               src="./assets/green-flower.png"
             />
           </div>
+          <img
+            class="click-btn"
+            alt="pointer clicking"
+            src="./assets/click.png"
+          />
         </div>
       </div>
     </section>
@@ -154,6 +159,7 @@
     function openEnvelope() {
       envelope.classList.add("open");
       envelope.classList.remove("close");
+      envelope.classList.remove("floating");
       document.querySelectorAll(".text").forEach((element) => {
         element.classList.add("animate-text");
       });
@@ -162,6 +168,7 @@
     }
     function closeEnvelope() {
       envelope.classList.add("close");
+      envelope.classList.add("floating");
       envelope.classList.remove("open");
       envelope_is_open = false;
     }
