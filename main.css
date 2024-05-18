@@ -223,37 +223,25 @@ nav ul li a {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  height: 90%;
+  height: 95%;
   border-radius: 6px;
   box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
-  font-size: 1.1em;
-  letter-spacing: 0.5px;
   border-width: 10px;
   border-style: solid;
   border-image: linear-gradient(to right, var(--red), var(--light-pink)) 1;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .words {
-  position: absolute;
-  left: 10%;
-  width: 80%;
-  height: 14%;
+  margin: 0 auto;
+  width: 95%;
+  font-size: 1.35em;
+  letter-spacing: 0.5px;
 }
 
-.words.line1 {
-  top: 10%;
-}
-
-.words.line2 {
-  top: 20%;
-}
-
-.words.line3 {
-  top: 30%;
-}
-
-.words.line4 {
-  top: 40%;
+.words .intro {
+  margin-bottom: 10px;
 }
 
 .letter-stamp {
@@ -262,15 +250,6 @@ nav ul li a {
   top: 60%;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.animate-text {
-  stroke-width: 0.5;
-  fill: #f4f4f4;
-  stroke: black;
-  stroke-dasharray: 200;
-  stroke-dashoffset: 200;
-  animation: drawText 7s linear forwards;
 }
 
 .open .flap {
@@ -377,33 +356,37 @@ footer {
   }
 
   #envelope {
-    width: 300px;
-    height: 200px;
+    width: 350px;
+    height: 225px;
   }
 
   #envelope.open {
     top: 50px;
   }
 
+  .letter {
+    padding: 10px;
+  }
+
   .flap {
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 100px solid transparent;
-    border-top: 100px solid var(--dark-pink);
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-bottom: 125px solid transparent;
+    border-top: 125px solid var(--dark-pink);
   }
 
   .pocket {
-    border-left: 150px solid var(--light-pink);
-    border-right: 150px solid var(--light-pink);
-    border-bottom: 100px solid #c3796f;
-    border-top: 100px solid transparent;
+    border-left: 175px solid var(--light-pink);
+    border-right: 175px solid var(--light-pink);
+    border-bottom: 125px solid #c3796f;
+    border-top: 125px solid transparent;
   }
 
   .open .letter {
     transform: translateY(-90px);
   }
-  .text {
-    font-size: 0.55em;
+  .words {
+    font-size: 0.75em;
   }
   .animate-text {
     stroke-width: 0.45;
@@ -425,13 +408,6 @@ footer {
   }
   100% {
     top: -750px;
-  }
-}
-
-@keyframes drawText {
-  to {
-    stroke-dashoffset: 0;
-    fill: black;
   }
 }
 
