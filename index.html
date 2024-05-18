@@ -90,8 +90,7 @@
               <p class="intro">Dear Guest,</p>
               <p>
                 We would like to cordially invite you to celebrate with us on
-                November 16, 2024 @ 3:30 PM at Colony House 401 N Anaheim Blvd,
-                Anaheim, CA 92805
+                November 16, 2024 @ 3:30 PM at the Colony House in Anaheim.
               </p>
             </div>
             <img
@@ -117,6 +116,7 @@
   <script>
     var envelope_is_open = false;
     var open_counter = 0;
+    var envelope_click_btn = document.querySelector(".click-btn");
 
     function countdownTimer() {
       var endTime = new Date("November 16, 2024 15:30:00 PDT");
@@ -160,9 +160,7 @@
       envelope.classList.add("open");
       envelope.classList.remove("close");
       envelope.classList.remove("floating");
-      document.querySelectorAll(".text").forEach((element) => {
-        element.classList.add("animate-text");
-      });
+      envelope_click_btn.remove();
       envelope_is_open = true;
       open_counter += 1;
     }
@@ -175,8 +173,6 @@
 
     document.addEventListener("DOMContentLoaded", function () {
       var envelope = document.querySelector("#envelope");
-      var btn_open = document.querySelector("#open");
-      var btn_reset = document.querySelector("#reset");
       var scroll_arrows = document.querySelector(".arrows");
 
       scroll_arrows.addEventListener("click", function () {
@@ -190,12 +186,6 @@
         } else {
           openEnvelope();
         }
-      });
-      btn_open.addEventListener("click", function () {
-        openEnvelope();
-      });
-      btn_reset.addEventListener("click", function () {
-        closeEnvelope();
       });
     });
   </script>
