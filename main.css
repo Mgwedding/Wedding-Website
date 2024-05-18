@@ -304,6 +304,14 @@ nav ul li a {
   animation: floating 3s infinite ease-in-out;
 }
 
+/* ADD TO CALENDAR */
+.add-to-calendar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 100px auto;
+}
+
 footer {
   background-color: #333;
   color: #fff;

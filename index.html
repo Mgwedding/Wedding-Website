@@ -108,11 +108,30 @@
       </div>
     </section>
 
+    <section class="add-to-calendar-section">
+      <add-to-calendar-button
+        name="Kristen and Ruoyu's Wedding"
+        description="Adding Kristen and Ruoyu's wedding to your calendar"
+        startDate="2024-11-16"
+        startTime="15:30"
+        endDate="2024-11-16"
+        endTime="21:30"
+        timeZone="America/Los_Angeles"
+        location="Colony House, Anaheim"
+        options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+      ></add-to-calendar-button>
+    </section>
+
     <footer class="primary-font">
       <p>&copy; 2024 Kristen & Ruoyu's Wedding</p>
     </footer>
   </body>
 
+  <script
+    src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"
+    async
+    defer
+  ></script>
   <script>
     var envelope_is_open = false;
     var open_counter = 0;
