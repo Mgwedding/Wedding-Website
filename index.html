@@ -122,6 +122,25 @@
       ></add-to-calendar-button>
     </section>
 
+    <div class="audio-control-container">
+      <audio
+        class="audio-src"
+        src="./assets/still-into-you-isabella-kensington.mp3"
+        autostart="false"
+        volume="0.2"
+      >
+        Your browser does not support the audio element.
+      </audio>
+      <button class="toggle-music-btn" onclick="toggleMusic()">
+        <img
+          class="toggle-music-icon"
+          alt="play/pause button"
+          src="./assets/icons8-circled-play-50.png"
+        />
+      </button>
+      <p class="primary-font toggle-music-text">Let's tumblr this</p>
+    </div>
+
     <footer class="primary-font">
       <p>&copy; 2024 Kristen & Ruoyu's Wedding</p>
     </footer>
@@ -133,9 +152,15 @@
     defer
   ></script>
   <script>
-    var envelope_is_open = false;
-    var open_counter = 0;
-    var envelope_click_btn = document.querySelector(".click-btn");
+    var envelopeIsOpen = false;
+    var audioIsPlaying = false;
+    var openCounter = 0;
+    var envelopeClickBtn = document.querySelector(".click-btn");
+    var audio = document.querySelector(".audio-src");
+    var toggleMusicIcon = document.querySelector(".toggle-music-icon");
+    var playBtnSrc = "./assets/icons8-circled-play-50.png";
+    var pauseBtnSrc = "./assets/icons8-pause-button-50.png";
+    audio.volume = 0.3;
 
     function countdownTimer() {
       var endTime = new Date("November 16, 2024 15:30:00 PDT");
@@ -175,32 +200,44 @@
       countdownTimer();
     }, 1000);
 
+    function toggleMusic() {
+      if (audioIsPlaying) {
+        audio.pause();
+        audioIsPlaying = false;
+        toggleMusicIcon.src = playBtnSrc;
+      } else {
+        audio.play();
+        audioIsPlaying = true;
+        toggleMusicIcon.src = pauseBtnSrc;
+      }
+    }
+
     function openEnvelope() {
       envelope.classList.add("open");
       envelope.classList.remove("close");
       envelope.classList.remove("floating");
-      envelope_click_btn.remove();
-      envelope_is_open = true;
-      open_counter += 1;
+      envelopeClickBtn.remove();
+      envelopeIsOpen = true;
+      openCounter += 1;
     }
     function closeEnvelope() {
       envelope.classList.add("close");
       envelope.classList.add("floating");
       envelope.classList.remove("open");
-      envelope_is_open = false;
+      envelopeIsOpen = false;
     }
 
     document.addEventListener("DOMContentLoaded", function () {
       var envelope = document.querySelector("#envelope");
-      var scroll_arrows = document.querySelector(".arrows");
+      var scrollArrows = document.querySelector(".arrows");
 
-      scroll_arrows.addEventListener("click", function () {
+      scrollArrows.addEventListener("click", function () {
         document
           .querySelector(".countdown-section")
           .scrollIntoView({ behavior: "smooth" });
       });
       envelope.addEventListener("click", function () {
-        if (envelope_is_open && open_counter % 2 == 0) {
+        if (envelopeIsOpen && openCounter % 2 == 0) {
           closeEnvelope();
         } else {
           openEnvelope();

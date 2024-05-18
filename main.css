@@ -312,6 +312,25 @@ nav ul li a {
   margin: 20px auto 100px auto;
 }
 
+/* FOOTER and PLAY BUTTON */
+.audio-control-container {
+  position: fixed;
+  top: 94%;
+  left: 1%;
+}
+
+.toggle-music-btn {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.toggle-music-text {
+  margin-top: -10px;
+  font-size: 10px;
+  text-align: center;
+}
+
 footer {
   background-color: #333;
   color: #fff;
