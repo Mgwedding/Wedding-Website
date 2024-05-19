@@ -78,7 +78,7 @@ nav ul li a {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, transparent, black 110%);
   z-index: 2;
 }
 
