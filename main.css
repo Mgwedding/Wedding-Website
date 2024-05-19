@@ -410,6 +410,10 @@ footer {
     column-gap: 10px;
   }
 
+  .envelope-prompt {
+    line-height: 50px;
+  }
+
   .envlope-wrapper {
     height: 50%;
   }

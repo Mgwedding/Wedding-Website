@@ -38,6 +38,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      href="./assets/fountain-proposal.jpg"
+      as="image"
+      media="all"
+    />
   </head>
 
   <body>
@@ -56,11 +62,30 @@
         loop
         muted
         playsinline
-        poster="./assets/fountain-proposal.png"
+        poster="./assets/fountain-proposal.jpg"
       >
-        <source src="./assets/Hero Video.mp4" type="video/mp4" />
+        <source src="./assets/Hero Video 720P.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <script>
+        const minDownlink = 1;
+        const goodDownlink = 7;
+        var downlink = minDownlink + 0.1; // assume downlink is fine in the case downlink cannot be determined
+        try {
+          downlink = navigator.connection.downlink;
+        } catch (e) {
+          console.log("Unable to determine downlink");
+        }
+        if (downlink < minDownlink) {
+          document.querySelector("video").src = "";
+          console.log("Downlink is below minimum reqs - overriding source");
+        } else if (downlink > goodDownlink) {
+          document.querySelector("video").src = "./assets/Hero Video.mp4";
+          console.log("Downlink is above 7 - will pla HD video");
+        } else {
+          console.log("Downlink is fine - will play video");
+        }
+      </script>
       <div class="landing-text">
         <h1 class="primary-font">Kristen & Ruoyu</h1>
       </div>
@@ -69,7 +94,7 @@
 
     <section class="countdown-section">
       <div class="date-text primary-font">
-        <h1>November 16, 2024 3:30 PM</h1>
+        <h1>November 16, 2024</h1>
       </div>
       <div class="countdown-text secondary-font">
         <h2 class="countdown-day">00 DAYS</h2>
