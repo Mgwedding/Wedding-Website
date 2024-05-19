@@ -103,6 +103,7 @@ nav ul li a {
   z-index: 10;
   font-size: 2em;
   text-align: center;
+  user-select: none;
 }
 
 .arrows {
@@ -141,12 +142,11 @@ nav ul li a {
 
 /* COUNTDOWN SECTION */
 .countdown-section {
-  margin: 100px auto;
+  margin: 70px auto 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
 }
 
 .date-text h1 {
@@ -171,9 +171,29 @@ nav ul li a {
   font-weight: 100;
 }
 
+/* ADD TO CALENDAR */
+.add-to-calendar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 200px auto;
+}
+
 /* ENVELOPE SECTION */
-.details-section {
+.envelope-section {
   min-height: 600px;
+  position: relative;
+}
+
+.envelope-prompt {
+  text-align: center;
+  font-size: 3em;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
 .envlope-wrapper {
@@ -259,8 +279,8 @@ nav ul li a {
   position: absolute;
   z-index: 6;
   width: 50px;
-  top: 95%;
-  right: 0%;
+  top: 50%;
+  left: 50%;
   opacity: 1;
   transition: all 0.6 ease-in-out;
   animation: fade-pulse 2s ease-in-out infinite;
@@ -304,19 +324,12 @@ nav ul li a {
   animation: floating 3s infinite ease-in-out;
 }
 
-/* ADD TO CALENDAR */
-.add-to-calendar-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto 100px auto;
-}
-
 /* FOOTER and PLAY BUTTON */
 .audio-control-container {
   position: fixed;
-  top: 94%;
-  left: 1%;
+  top: 93%;
+  left: 2%;
+  z-index: 10;
 }
 
 .toggle-music-btn {
@@ -325,10 +338,34 @@ nav ul li a {
   background: none;
 }
 
+.toggle-music-icon {
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+
+.audio-control-container::before {
+  content: "";
+  position: absolute;
+  width: 45%;
+  height: 45%;
+  border-radius: 100%;
+  top: 20%;
+  left: 25%;
+  z-index: 1;
+  background-color: white;
+}
+
 .toggle-music-text {
   margin-top: -10px;
   font-size: 10px;
   text-align: center;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.is-hidden {
+  opacity: 0;
 }
 
 footer {
@@ -348,6 +385,10 @@ footer {
   .arrows {
     transform: translate(-50%, -50%) scale(0.5);
     top: 85%;
+  }
+  .audio-control-container {
+    top: 90%;
+    left: 3%;
   }
 }
 

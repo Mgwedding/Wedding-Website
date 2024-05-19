@@ -79,7 +79,22 @@
       </div>
     </section>
 
-    <section class="details-section">
+    <section class="add-to-calendar-section">
+      <add-to-calendar-button
+        name="Kristen and Ruoyu's Wedding"
+        description="Adding Kristen and Ruoyu's wedding to your calendar"
+        startDate="2024-11-16"
+        startTime="15:30"
+        endDate="2024-11-16"
+        endTime="21:30"
+        timeZone="America/Los_Angeles"
+        location="Colony House, Anaheim"
+        options="'Apple','Google','iCal','Outlook.com','Yahoo'"
+      ></add-to-calendar-button>
+    </section>
+
+    <section class="envelope-section">
+      <h1 class="primary-font envelope-prompt">Open your invitation!</h1>
       <div class="envlope-wrapper">
         <div id="envelope" class="close floating">
           <div class="front flap"></div>
@@ -106,20 +121,6 @@
           />
         </div>
       </div>
-    </section>
-
-    <section class="add-to-calendar-section">
-      <add-to-calendar-button
-        name="Kristen and Ruoyu's Wedding"
-        description="Adding Kristen and Ruoyu's wedding to your calendar"
-        startDate="2024-11-16"
-        startTime="15:30"
-        endDate="2024-11-16"
-        endTime="21:30"
-        timeZone="America/Los_Angeles"
-        location="Colony House, Anaheim"
-        options="'Apple','Google','iCal','Outlook.com','Yahoo'"
-      ></add-to-calendar-button>
     </section>
 
     <div class="audio-control-container">
@@ -156,10 +157,14 @@
     var audioIsPlaying = false;
     var openCounter = 0;
     var envelopeClickBtn = document.querySelector(".click-btn");
+    var envelopePrompt = document.querySelector(".envelope-prompt");
     var audio = document.querySelector(".audio-src");
     var toggleMusicIcon = document.querySelector(".toggle-music-icon");
+    var toggleMusicText = document.querySelector(".toggle-music-text");
     var playBtnSrc = "./assets/icons8-circled-play-50.png";
     var pauseBtnSrc = "./assets/icons8-pause-button-50.png";
+    var scrollPosToggleTextIntro = 130;
+    var scrollPosToggleTextExit = 800;
     audio.volume = 0.3;
 
     function countdownTimer() {
@@ -212,11 +217,21 @@
       }
     }
 
+    function checkScrollPosition() {
+      let windowY = window.scrollY;
+      if (windowY < scrollPosToggleTextIntro || windowY > 800) {
+        toggleMusicText.classList.add("is-hidden");
+      } else {
+        toggleMusicText.classList.remove("is-hidden");
+      }
+    }
+
     function openEnvelope() {
       envelope.classList.add("open");
       envelope.classList.remove("close");
       envelope.classList.remove("floating");
       envelopeClickBtn.remove();
+      envelopePrompt.classList.add("is-hidden");
       envelopeIsOpen = true;
       openCounter += 1;
     }
@@ -244,5 +259,6 @@
         }
       });
     });
+    window.addEventListener("scroll", checkScrollPosition);
   </script>
 </html>
