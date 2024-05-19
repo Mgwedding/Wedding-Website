@@ -77,10 +77,10 @@
           console.log("Unable to determine downlink");
         }
         if (downlink < minDownlink) {
-          document.querySelector("video").src = "";
+          document.querySelector("source").src = "";
           console.log("Downlink is below minimum reqs - overriding source");
         } else if (downlink > goodDownlink) {
-          document.querySelector("video").src = "./assets/Hero Video.mp4";
+          document.querySelector("source").src = "./assets/Hero Video.mp4";
           console.log("Downlink is above 7 - will pla HD video");
         } else {
           console.log("Downlink is fine - will play video");
