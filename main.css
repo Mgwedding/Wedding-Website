@@ -332,46 +332,52 @@ nav ul li a {
 /* GALLERY  */
 .gallery-section {
   margin: 0 auto 75px auto;
+  width: 95vw;
+  overflow: hidden;
 }
 
 .gallery-container {
   display: flex;
-  column-gap: 20px;
-  row-gap: 20px;
+  gap: 20px;
   justify-content: center;
+  margin: auto;
 }
 
 .gallery-col {
   display: flex;
-  row-gap: 20px;
+  gap: 20px;
   flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
 }
 
 .gallery-img {
   object-fit: cover;
-  width: 300px;
-  height: 300px;
+  width: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 5px 5px 25px rgba(0, 0, 0, 0.1);
 }
 
 .horizontal-img {
-  width: 350px;
   height: 200px;
 }
 
 .standard-img {
-  width: 350px;
   height: 400px;
 }
 
 .standard-img-small {
-  width: 165px;
   height: 190px;
 }
 
 .tall-img {
   height: 400px;
-  width: 165px;
+  max-width: 165px;
 }
 
 /* FOOTER and PLAY BUTTON */
@@ -443,6 +449,29 @@ footer {
   .audio-control-container {
     top: 90%;
     left: 3%;
+  }
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
+  .gallery-col {
+    gap: 10px;
+  }
+  .gallery-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tall-img {
+    max-width: unset;
+  }
+}
+
+/* Smaller than pro max */
+@media only screen and (max-width: 500px) {
+  .responsive-col {
+    flex-direction: row;
+    justify-content: center;
   }
 }
 
