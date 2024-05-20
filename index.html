@@ -44,6 +44,7 @@
       as="image"
       media="all"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
@@ -94,7 +95,7 @@
 
     <section class="countdown-section">
       <div class="date-text primary-font">
-        <h1>November 16, 2024</h1>
+        <h1 data-aos="fade-up">November 16, 2024</h1>
       </div>
       <div class="countdown-text secondary-font">
         <h2 class="countdown-day">00 DAYS</h2>
@@ -121,7 +122,7 @@
     <section class="envelope-section">
       <h1 class="primary-font envelope-prompt">Open your mail!</h1>
       <div class="envlope-wrapper">
-        <div id="envelope" class="close floating">
+        <div id="envelope" data-aos="zoom-in-up" class="close floating">
           <div class="front flap"></div>
           <div class="front pocket"></div>
 
@@ -177,6 +178,8 @@
     async
     defer
   ></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
   <script>
     var envelopeIsOpen = false;
     var audioIsPlaying = false;
@@ -285,5 +288,11 @@
       });
     });
     window.addEventListener("scroll", checkScrollPosition);
+  </script>
+
+  <script src="fslightbox.js"></script>
+
+  <script>
+    AOS.init();
   </script>
 </html>
