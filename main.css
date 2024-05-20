@@ -329,6 +329,51 @@ nav ul li a {
   animation: floating 3s infinite ease-in-out;
 }
 
+/* GALLERY  */
+.gallery-section {
+  margin: 0 auto 75px auto;
+}
+
+.gallery-container {
+  display: flex;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+.gallery-col {
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+}
+
+.gallery-img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 5px 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-img {
+  width: 350px;
+  height: 200px;
+}
+
+.standard-img {
+  width: 350px;
+  height: 400px;
+}
+
+.standard-img-small {
+  width: 165px;
+  height: 190px;
+}
+
+.tall-img {
+  height: 400px;
+  width: 165px;
+}
+
 /* FOOTER and PLAY BUTTON */
 .audio-control-container {
   position: fixed;
