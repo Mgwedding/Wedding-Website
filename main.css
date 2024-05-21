@@ -333,7 +333,6 @@ nav ul li a {
 .gallery-section {
   margin: 0 auto 75px auto;
   width: 95vw;
-  overflow: hidden;
 }
 
 .gallery-container {
@@ -348,7 +347,6 @@ nav ul li a {
   gap: 20px;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 .gallery-row {
