@@ -176,7 +176,7 @@ nav ul li a {
 
 .countdown-text h2 {
   border-left: 1px solid black;
-  padding-left: 10px;
+  padding-left: 20px;
   font-size: 1.2em;
   font-weight: 100;
 }
@@ -491,15 +491,28 @@ footer {
   }
   .countdown-text h2 {
     font-size: 0.8em;
+    padding-left: 10px;
+  }
+  .countdown-text {
+    column-gap: 10px;
   }
 
   .countdown-text {
     column-gap: 10px;
   }
 
+  .add-to-calendar-section {
+    margin: 50px auto 150px auto;
+  }
+
+  .envelope-section {
+    min-height: 350px;
+  }
+
   .envelope-prompt {
     line-height: 50px;
     width: 75%;
+    top: -29%;
   }
 
   .envlope-wrapper {
@@ -544,6 +557,9 @@ footer {
   }
   .details-section {
     min-height: 400px;
+  }
+  .hidden-on-mobile {
+    display: none;
   }
 }
 
