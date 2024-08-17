@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About Us</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ryca" />
+    <meta
+      name="description"
+      content="Save the date landing page for Kristen and Ruoyu's November 2024 wedding."
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+
+  <body>
+    <div>
+      <header>
+        <nav class="nav">
+          <ul class="secondary-font hidden-on-mobile">
+            <li><a href="/">Home</a></li>
+            <li><a href="about.html">About & FAQ</a></li>
+            <li>
+              <a href="https://withjoy.com/kristenandruoyu/registry"
+                >Registry</a
+              >
+            </li>
+          </ul>
+          <div class="rsvp-container hidden-on-mobile">
+            <a
+              class="rsvp-link"
+              href="https://withjoy.com/kristenandruoyu/rsvp"
+              target="_blank"
+              >RSVP</a
+            >
+          </div>
+          <div class="hidden-on-desktop">
+            <ul id="mobile-nav">
+              <li>
+                <a
+                  class="cursive-font rsvp-cta"
+                  href="https://withjoy.com/kristenandruoyu/rsvp"
+                  target="_blank"
+                  >RSVP</a
+                >
+              </li>
+              <li>
+                <img
+                  class="hamburger-menu"
+                  width="40"
+                  onclick="toggleNav()"
+                  src="assets/hamburger.png"
+                  alt="Navigation accordion"
+                />
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="fullscreen-nav">
+          <img
+            class="exit-button"
+            width="50"
+            onclick="toggleNav()"
+            src="https://img.icons8.com/?size=100&id=71200&format=png&color=000000"
+            alt="Exit navigation accordion button"
+          />
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a onclick="toggleNav()">About</a></li>
+            <li><a href="about.html/#FAQ">FAQ</a></li>
+            <li>
+              <a href="https://withjoy.com/kristenandruoyu/registry"
+                >Registry</a
+              >
+            </li>
+            <li class="rsvp-link">
+              <a href="https://withjoy.com/kristenandruoyu/rsvp" target="_blank"
+                >RSVP</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <main>
+      <section class="our-story-section">
+        <h1 class="title primary-font">Our Story</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
+
+      <section id="faq" class="faq-section">
+        <h1 class="title primary-font">Questions? Answers.</h1>
+        <ul class="accordion faq-ul">
+          <li class="accordion-item">
+            <div class="question-container">
+              <h3 class="question">When is the RSVP deadline?</h3>
+              <span class="accordion-icon" data-accordion-icon=""
+                ><svg class="accordion-icon-svg" viewBox="0 0 17 8.85">
+                  <polyline
+                    data-accordion-icon-shape=""
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                    fill-rule="evenodd"
+                    points="15 1.13 8.5 7.72 2 1.13"
+                  >
+                    <animate
+                      data-accordion-animate="expand"
+                      attributeName="points"
+                      values="15 1.13 8.5 7.72 2 1.13;
+                        15.85 4.42 8.5 4.42 1.15 4.42;
+                        15 7.72 8.5 1.13 2 7.72"
+                      dur="320ms"
+                      begin="indefinite"
+                      fill="freeze"
+                      keyTimes="0;
+                        0.5;
+                        1"
+                      calcMode="spline"
+                      keySplines="0.12, 0, 0.38, 0;
+                          0.2, 1, 0.68, 1"
+                    ></animate>
+                    <animate
+                      data-accordion-animate="collapse"
+                      attributeName="points"
+                      values="15 7.72 8.5 1.13 2 7.72;
+                        15.85 4.42 8.5 4.42 1.15 4.42;
+                        15 1.13 8.5 7.72 2 1.13"
+                      dur="320ms"
+                      begin="indefinite"
+                      fill="freeze"
+                      keyTimes="0;
+                        0.5;
+                        1"
+                      calcMode="spline"
+                      keySplines="0.2, 0, 0.68, 0;
+                          0.2, 1, 0.68, 1"
+                    ></animate>
+                  </polyline>
+                </svg>
+              </span>
+            </div>
+            <div class="answer">
+              <p>
+                We kindly ask that you RSVP by October 5th & respond only for
+                yourself and any plus ones noted on your invitation. We
+                appreciate your timely response and can't wait to celebrate with
+                you!
+              </p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="question">Where should we park?</h3>
+            <div class="answer">
+              <p>
+                The Colony House has parking onsite (no fee or valet required).
+              </p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="question">Is there a dress code?</h3>
+            <div class="answer">
+              <p>
+                We're embracing the beauty of the season with an autumnal formal
+                dress code. We invite our guests to join us in rich, warm tones
+                inspired by fall—think deep reds, earthy browns, elegant golds,
+                and burnt oranges. We can't wait to celebrate with you in style!
+              </p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="question">Can I take pictures during the ceremony?</h3>
+            <div class="answer">
+              <p>
+                The officiant will prompt a moment for personal pictures or
+                video. After that time frame, we invite you to be truly present
+                with us during our ceremony & kindly ask that you turn off all
+                devices.
+              </p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="question">Will alcohol be served?</h3>
+            <div class="answer"><p>There will be an open bar!</p></div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="question">Is there a gifts registry?</h3>
+            <div class="answer">
+              <p>
+                We are fortunate to have most things we need for life and love.
+                With that said, we know some people prefer to buy gifts off a
+                registry. We created ours with <a>WithJoy</a>. Either way, we
+                would appreciate your prayers and well wishes as we start this
+                next chapter together.
+              </p>
+            </div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="question">QUESTION</h3>
+            <div class="answer">ANSWER</div>
+          </li>
+          <li class="accordion-item">
+            <h3 class="question">QUESTION</h3>
+            <div class="answer">ANSWER</div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <div class="audio-control-container">
+      <audio
+        class="audio-src"
+        src="./assets/still-into-you-isabella-kensington.mp3"
+        autostart="false"
+        volume="0.2"
+      >
+        Your browser does not support the audio element.
+      </audio>
+      <button class="toggle-music-btn" onclick="toggleMusic()">
+        <img
+          class="toggle-music-icon"
+          alt="play/pause button"
+          src="./assets/icons8-circled-play-50.png"
+        />
+      </button>
+      <p class="primary-font toggle-music-text">Let's tumblr this</p>
+    </div>
+
+    <footer class="primary-font">
+      <p>&copy; 2024 Kristen & Ruoyu's Wedding</p>
+    </footer>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2"
+    async
+    defer
+  ></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script>
+    var audioIsPlaying = false;
+    var audio = document.querySelector(".audio-src");
+    var toggleMusicIcon = document.querySelector(".toggle-music-icon");
+    var toggleMusicText = document.querySelector(".toggle-music-text");
+    var playBtnSrc = "./assets/icons8-circled-play-50.png";
+    var pauseBtnSrc = "./assets/icons8-pause-button-50.png";
+    var scrollPosToggleTextIntro = 130;
+    var scrollPosToggleTextExit = 800;
+    audio.volume = 0.3;
+
+    function toggleNav() {
+      var navPanel = document.querySelector(".fullscreen-nav");
+      navPanel.classList.toggle("show-nav");
+    }
+
+    // Toggle FAQ
+    const faqs = document.querySelectorAll(".accordion-item");
+    faqs.forEach((faq) => {
+      faq.addEventListener("click", () => {
+        faq.classList.toggle("expanded");
+        var answerContainer = faq.querySelector(".answer");
+        var accordionExpandCarrot = faq.querySelector(
+          "animate[data-accordion-animate='expand']"
+        );
+        var accordionCollapseCarrot = faq.querySelector(
+          "animate[data-accordion-animate='collapse']"
+        );
+        if (faq.classList.contains("expanded")) {
+          answerContainer.style.maxHeight = answerContainer.scrollHeight + "px";
+          accordionExpandCarrot.beginElement();
+        } else {
+          answerContainer.style.maxHeight = null;
+          accordionCollapseCarrot.beginElement();
+        }
+      });
+    });
+
+    function toggleMusic() {
+      if (audioIsPlaying) {
+        audio.pause();
+        audioIsPlaying = false;
+        toggleMusicIcon.src = playBtnSrc;
+      } else {
+        audio.play();
+        audioIsPlaying = true;
+        toggleMusicIcon.src = pauseBtnSrc;
+      }
+    }
+
+    function checkScrollPosition() {
+      let windowY = window.scrollY;
+      if (windowY < scrollPosToggleTextIntro || windowY > 800) {
+        toggleMusicText.classList.add("is-hidden");
+      } else {
+        toggleMusicText.classList.remove("is-hidden");
+      }
+    }
+
+    window.addEventListener("scroll", checkScrollPosition);
+  </script>
+
+  <script src="fslightbox.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
+</html>
