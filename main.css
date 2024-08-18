@@ -497,6 +497,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 0.4s ease-in-out;
+  color: var(--dark-grey);
 }
 
 .selection-wrapper button:hover {
