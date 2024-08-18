@@ -543,7 +543,7 @@ body {
 
 .curly-arrow {
   position: absolute;
-  top: -17%;
+  top: -12%;
   left: 52%;
   transform: rotate(195deg);
   animation: fade-pulse 2s infinite;
@@ -797,8 +797,9 @@ footer {
     column-gap: 10px;
   }
   .add-to-calendar-section .svg-draw {
-    left: -10%;
-    top: -50px;
+    left: -13%;
+    top: -20px;
+    height: 150px;
   }
 
   .details-card-wrapper {

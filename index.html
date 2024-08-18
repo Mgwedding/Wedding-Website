@@ -322,7 +322,7 @@
             <p>
               For more information on our story, our friends and other commonly
               asked questions, please refer to our
-              <a>About</a> page!
+              <a href="about.html">About</a> page!
             </p>
           </div>
         </div>
@@ -379,7 +379,7 @@
         class="bridesmaids-container secondary-font"
       >
         <div class="bridemaid-card">
-          <p class="click-prompt">Click here</p>
+          <p class="click-prompt">Hover here!</p>
           <img class="curly-arrow" src="assets/curly-arrow.png" width="15" />
           <div class="profile-wrapper">
             <img
@@ -720,8 +720,9 @@
     var hasClickedSocial = false;
     profiles.forEach((profileCard) => {
       var socialWrapper = profileCard.querySelector(".social-wrapper");
+      var socialIcon = socialWrapper.querySelector("a");
       profileCard.addEventListener("click", () => {
-        socialWrapper.classList.toggle("active");
+        // socialWrapper.classList.toggle("active");
         if (hasClickedSocial == false) {
           document.querySelector(".click-prompt").remove();
           document.querySelector(".curly-arrow").remove();
@@ -734,19 +735,20 @@
     const svgPath = document.querySelector(".svg-draw path");
     const length = svgPath.getTotalLength();
     document.documentElement.style.setProperty("--svgLength", length);
-    var desktopMultiplier = 2.15;
-    var mobileMultiplier = 3.5;
 
     function drawSvg() {
+      let svgPosition = document
+        .querySelector(".svg-draw")
+        .getBoundingClientRect();
       let elementScrollTop = document.documentElement.scrollTop; // position
-      let elementScrollHeight = document.documentElement.scrollHeight; // total page size
-      let elementClientHeight = document.documentElement.clientHeight; // size of the screen
+      const scrollBuffer = 150;
 
-      let scrollpercent =
-        elementScrollTop / (elementScrollHeight - elementClientHeight);
+      let scrollpercent = Math.min(
+        elementScrollTop / (svgPosition["y"] + scrollBuffer),
+        1
+      );
 
       let draw = length * scrollpercent;
-
       svgPath.style.strokeDashoffset = length - draw;
     }
 
