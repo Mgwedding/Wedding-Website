@@ -311,6 +311,12 @@ body {
   border: 1px solid var(--beige);
   border-radius: 8px;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease-out;
+}
+
+.rsvp-button:hover {
+  background-color: var(--dark-pink);
+  color: var(--beige);
 }
 
 .rsvp-button a {
@@ -496,12 +502,12 @@ body {
   font-size: 1.25em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  transition: 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
   color: var(--dark-grey);
 }
 
 .selection-wrapper button:hover {
-  color: var(--light-pink);
+  color: var(--dark-pink);
 }
 
 .selection-wrapper button.active {
