@@ -7,8 +7,9 @@
   --blue: #0b1f38;
   --dark-grey: #3c3c38;
   --secondary-grey: #636363;
-  --svgLength: 0;
   --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 5px 5px 25px rgba(0, 0, 0, 0.1);
+  --svgLength: 0;
+  --svgLength2: 0;
 }
 
 @font-face {
@@ -98,7 +99,7 @@ body {
 }
 
 .nav .rsvp-link {
-  padding: 5px 10px;
+  padding: 1px 15px;
   border-radius: 5px;
   background-color: var(--dark-pink);
   color: var(--beige);
@@ -127,11 +128,11 @@ body {
 }
 
 #mobile-nav .rsvp-cta {
-  margin-left: 20px;
-  font-size: 2em;
+  margin-left: 10px;
+  font-size: 1.5em;
   color: var(--beige);
   background-color: var(--dark-pink);
-  padding: 5px 10px;
+  padding: 5px 15px;
   border-radius: 5px;
 }
 
@@ -269,7 +270,7 @@ body {
 
 /* COUNTDOWN SECTION */
 .countdown-section {
-  margin: 100px auto 20px auto;
+  margin: 120px auto 100px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -396,9 +397,14 @@ body {
   stroke-width: 2;
 }
 
+.svg-draw-2 path {
+  stroke-dasharray: var(--svgLength2);
+  stroke-dashoffset: var(--svgLength2);
+}
+
 /* DETAILS SECTION */
 .details-section {
-  padding: 40px;
+  padding: 75px 40px 40px 40px;
   background-color: var(--beige-transparent);
   display: flex;
   justify-content: center;
@@ -417,7 +423,7 @@ body {
 
 .details-card-wrapper {
   display: flex;
-  gap: 30px;
+  gap: 55px;
   margin-bottom: -75px;
 }
 
@@ -478,7 +484,7 @@ body {
 
 /* FRIENDS */
 .friends-section {
-  margin-top: 225px;
+  margin-top: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -811,6 +817,7 @@ footer {
 
   .details-card-wrapper {
     flex-direction: column;
+    gap: 45px;
   }
   .itinerary-wrapper {
     flex-direction: column;
