@@ -384,6 +384,32 @@ body {
   position: relative;
 }
 
+.rsvp-button-wrapper {
+  position: relative;
+}
+
+.rsvp-button-wrapper .click-prompt {
+  position: absolute;
+  top: -39px;
+  left: unset;
+  right: -76px;
+  transform: rotate(4deg);
+  font-weight: lighter;
+  color: var(--light-pink);
+  font-size: 0.9em;
+  animation: unset;
+}
+
+.rsvp-button-wrapper .curly-arrow {
+  position: absolute;
+  top: -14px;
+  left: unset;
+  transform: rotate(-98deg);
+  animation: fade-pulse 2s infinite;
+  animation-delay: 0s;
+  right: -30px;
+}
+
 .add-to-calendar-section .svg-draw {
   position: absolute;
   left: 5%;
