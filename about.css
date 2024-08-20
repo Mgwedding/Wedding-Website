@@ -53,7 +53,6 @@ main {
 .timeline-item {
   position: relative;
   width: 30%;
-  min-width: 200px;
   min-height: 200px;
   margin-left: 35px;
   text-align: left;
@@ -73,16 +72,6 @@ main {
   font-weight: 700;
   color: var(--dark-pink);
 }
-
-/* .timeline-item .details:after {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 60px;
-  height: 70%;
-  width: 2px;
-  background-color: #944342;
-} */
 
 .timeline-item:before {
   content: "";
