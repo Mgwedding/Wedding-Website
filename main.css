@@ -478,7 +478,7 @@ body {
 .itinerary-wrapper {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
   background-color: white;
   padding: 40px 20px;
   box-shadow: var(--box-shadow);
@@ -492,6 +492,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 130px;
 }
 
 .itinerary-card h2 {
@@ -541,6 +542,7 @@ body {
 
 .selection-wrapper button:hover {
   color: var(--dark-pink);
+  cursor: pointer;
 }
 
 .selection-wrapper button.active {
@@ -775,6 +777,9 @@ footer {
   .audio-control-container {
     top: 90%;
     left: 3%;
+  }
+  .itinerary-card {
+    width: unset;
   }
   .friends-section .title {
     text-align: center;
